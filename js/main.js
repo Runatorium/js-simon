@@ -1,5 +1,6 @@
 let numeri = [];
 let numeriinseriti = [];
+let numericorretti = 0;
 
 
 
@@ -34,9 +35,15 @@ setTimeout(function() {
             numericorretti++
             let numerocorrente = document.getElementById('numero'+i);
             numerocorrente.classList.add('rightnumber');
-            let score = document.getElementById('punteggio');
-            score.append(numericorretti);
         }
+    }
+
+    if(numericorretti == 0){
+        let score = document.getElementById('punteggio');
+        score.innerHTML = ('hai indovinato correttamente  0  numeri');
+    } else{
+        let score = document.getElementById('punteggio');
+        score.innerHTML = ('hai indovinato correttamente '+ numericorretti +' numeri');
     }
         
      
