@@ -25,12 +25,20 @@ setTimeout(function() {
      console.log(numeriinseriti);
 
     for(i=0; i<5; i++){
+
         if(!(numeri.includes(numeriinseriti[i]))){  
             console.log('non è presente il numero', numeriinseriti[i]);
             let numerocorrente = document.getElementById('numero'+i);
             numerocorrente.classList.add('wrongnumber');
+        }else{
+            numericorretti++
+            let numerocorrente = document.getElementById('numero'+i);
+            numerocorrente.classList.add('rightnumber');
+            let score = document.getElementById('punteggio');
+            score.append(numericorretti);
         }
-    }   
+    }
+        
      
 }, 2100);
 
